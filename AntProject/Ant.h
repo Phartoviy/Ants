@@ -1,0 +1,33 @@
+#pragma once
+#include "Resources.h"
+
+class Ant
+{
+public:
+	int health;
+	int getHealth();
+
+};
+
+class WorkerAnt : public Ant
+{
+	int countCollectRes;
+	std::string typeRes;
+public:
+	int getCountCollectRes();
+	std::string getTypeRes();
+
+
+};
+
+
+class WarriorAnt : public Ant
+{
+	int armor;
+	int damage;
+};
+
+class QueenAnt
+{
+
+};
