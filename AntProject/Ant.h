@@ -7,15 +7,15 @@
 class Ant
 {
 public:
-	int health;
+	int health{};
 	int getHealth();
 
 };
 
 class WorkerAnt : public Ant
 {
-	int countCollectRes;
-	std::string typeRes;
+	int countCollectRes{};
+	std::string typeRes{""};
 public:
 	int getCountCollectRes();
 	std::string getTypeRes();
@@ -26,8 +26,8 @@ public:
 
 class WarriorAnt : public Ant
 {
-	int armor;
-	int damage;
+	int armor{};
+	int damage{};
 };
 
 class QueenAnt
