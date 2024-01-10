@@ -1,16 +1,16 @@
 #include "AntColony.h"
 
-WorkerAnt AntColony::getWorker(int index)
+std::shared_ptr<WorkerAnt> AntColony::getWorker(int index)
 {
 	if (index < workers.size())
 		return workers[index];
 	else
-		return WorkerAnt();
+		return nullptr;
 }
 
-void AntColony::collectResourcesForColony(WorkerAnt ant, Heap heap)
+void AntColony::collectResourcesForColony(std::shared_ptr<WorkerAnt> ant, Heap &heap)
 {	
-	std::string resourcesAnt = ant.getTypeRes();
+	std::string resourcesAnt = ant->getTypeRes();
 	for (int i = 0; i != resourcesAnt.size(); i++)
 	{
 		switch (resourcesAnt[i])
@@ -19,8 +19,8 @@ void AntColony::collectResourcesForColony(WorkerAnt ant, Heap heap)
 		{	if (heap.leaf > 0) 
 			{
 				int remainLeafs = heap.leaf;
-				if (heap.reduceLeafs(ant.getCountCollectRes()))
-					resourcesColony.leaf += ant.getCountCollectRes();
+				if (heap.reduceLeafs(ant->getCountCollectRes()))
+					resourcesColony.leaf += ant->getCountCollectRes();
 				else
 					resourcesColony.leaf += remainLeafs;
 				return;
@@ -32,8 +32,8 @@ void AntColony::collectResourcesForColony(WorkerAnt ant, Heap heap)
 			if (heap.stick > 0)
 			{
 				int remainSticks = heap.stick;
-				if (heap.reduceSticks(ant.getCountCollectRes()))
-					resourcesColony.stick += ant.getCountCollectRes();
+				if (heap.reduceSticks(ant->getCountCollectRes()))
+					resourcesColony.stick += ant->getCountCollectRes();
 				else
 					resourcesColony.stick += remainSticks;
 				return;
@@ -45,8 +45,8 @@ void AntColony::collectResourcesForColony(WorkerAnt ant, Heap heap)
 			if (heap.stone > 0)
 			{
 				int remainStones = heap.stone;
-				if (heap.reduceStones(ant.getCountCollectRes()))
-					resourcesColony.stone += ant.getCountCollectRes();
+				if (heap.reduceStones(ant->getCountCollectRes()))
+					resourcesColony.stone += ant->getCountCollectRes();
 				else
 					resourcesColony.stone += remainStones;
 				return;

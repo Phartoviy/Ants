@@ -1,4 +1,7 @@
-#pragma once
+#ifndef ANT_H
+#define ANT_H
+
+
 #include "Resources.h"
 
 class Ant
@@ -31,3 +34,6 @@ class QueenAnt
 {
 
 };
+
+
+#endif // !ANT_H
