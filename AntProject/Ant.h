@@ -28,7 +28,16 @@ class WarriorAnt : public Ant
 {
 	int armor{};
 	int damage{};
+
+public:
+	bool isArmorEmpty();
+	int getDamage();
+	void attack(int dmg);
+	void reduceArmor(int dmg);
+
 };
+
+
 
 class QueenAnt
 {

@@ -63,8 +63,16 @@ void AntColony::collectResourcesForColony(std::shared_ptr<Ant> ant, Heap &heap)
 
 void AntColony::attackOpponentColony(std::shared_ptr<Ant> attacker, std::shared_ptr<Ant> oppoAnt)
 {
-	
-
+	auto antWarriorAttack = static_cast<WarriorAnt*>(attacker.get());
+	auto antWarriorOpponent = static_cast<WarriorAnt*>(oppoAnt.get());
+	if (antWarriorOpponent->isArmorEmpty())
+	{
+		antWarriorOpponent->attack(antWarriorAttack->getDamage());
+	}
+	else
+	{
+		antWarriorOpponent->reduceArmor(antWarriorAttack->getDamage());
+	}
 
 
 }
