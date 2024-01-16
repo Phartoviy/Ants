@@ -2,7 +2,7 @@
 
 int Ant::getHealth()
 {
-    return health;
+    return m_health;
 }
 
 int WorkerAnt::getCountCollectRes()
@@ -30,7 +30,7 @@ int WarriorAnt::getDamage()
 
 void WarriorAnt::attack(int dmg)
 {
-    health -= dmg;
+    m_health -= dmg;
 }
 
 void WarriorAnt::reduceArmor(int dmg)

@@ -7,7 +7,7 @@
 class Ant
 {
 public:
-	int health{};
+	int m_health{};
 	int getHealth();
 
 };

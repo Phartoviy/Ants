@@ -76,3 +76,9 @@ void AntColony::attackOpponentColony(std::shared_ptr<Ant> attacker, std::shared_
 
 
 }
+
+void AntColony::appearAnt()
+{
+
+
+}
