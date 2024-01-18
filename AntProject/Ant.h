@@ -39,8 +39,15 @@ public:
 
 
 
-class QueenAnt
+class QueenAnt : public Ant
 {
+	std::string name{""};
+
+public:
+	std::string getName();
+
+
+
 
 };
 

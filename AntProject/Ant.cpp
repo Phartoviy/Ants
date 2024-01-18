@@ -37,3 +37,8 @@ void WarriorAnt::reduceArmor(int dmg)
 {
     armor -= dmg;
 }
+
+std::string QueenAnt::getName()
+{
+    return name;
+}

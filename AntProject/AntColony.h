@@ -15,7 +15,8 @@ public:
 	std::shared_ptr<Ant> getWorker(int index);
 	void collectResourcesForColony(std::shared_ptr<Ant> ant, Heap &heap);
 	void attackOpponentColony(std::shared_ptr<Ant> attacker, std::shared_ptr<Ant> oppoAnt);
-	void appearAnt();
+	void appearAnt(int count);
+	void clear(std::vector <std::shared_ptr<Ant>> &v);
 };
 
 #endif // !ANTCOLONY_H

@@ -1,5 +1,2 @@
 ﻿  AntColony.cpp
-  Main.cpp
-D:\VisualProject\AntProject\AntProject\Main.cpp(9,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Создание кода...
   AntProject.vcxproj -> D:\VisualProject\AntProject\x64\Debug\AntProject.exe

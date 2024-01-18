@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-
+#include <algorithm>
 struct Heap
 {
 	int leaf;

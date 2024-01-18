@@ -77,8 +77,17 @@ void AntColony::attackOpponentColony(std::shared_ptr<Ant> attacker, std::shared_
 
 }
 
-void AntColony::appearAnt()
+void AntColony::appearAnt(int count)
 {
+	for (int i = 0; i != count; i++)
+	{
+		int type = rand() % 2;
+		//(type == 0)?workers.push_back()
+	}
 
+}
 
+void AntColony::clear(std::vector<std::shared_ptr<Ant>> &v)
+{
+	v.erase(std::remove_if(v.begin(), v.end(), [](std::shared_ptr<Ant> ant) {return ant->getHealth() < 0; }), v.end());
 }
