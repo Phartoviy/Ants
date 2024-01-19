@@ -40,5 +40,5 @@ void WarriorAnt::reduceArmor(int dmg)
 
 std::string QueenAnt::getName()
 {
-    return name;
+    return m_name;
 }

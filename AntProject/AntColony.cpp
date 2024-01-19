@@ -82,7 +82,16 @@ void AntColony::appearAnt(int count)
 	for (int i = 0; i != count; i++)
 	{
 		int type = rand() % 2;
-		//(type == 0)?workers.push_back()
+		if (type == 0)
+		{
+			std::shared_ptr<WorkerAnt> workAnt = std::make_shared<WorkerAnt>(WorkerAnt(25, 2, "ls"));
+			workers.push_back(workAnt);
+		}
+		else
+		{
+			std::shared_ptr<WarriorAnt> warAnt = std::make_shared<WarriorAnt>(WarriorAnt(25,5,4));
+			warriors.push_back(warAnt);
+		}
 	}
 
 }
